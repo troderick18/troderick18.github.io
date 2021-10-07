@@ -7,13 +7,39 @@
     padding: 15px;
 }
 
-.contact ul li {
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.row {
+    width: 100%;
+}
+
+.column ul li {
     padding: 15px;
     list-style: none;
 }
 
-.contact ul li a {
+.column ul li a {
     text-decoration: none;
+}
+
+.column {
+    float: left;
+    width: 40%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+.column h1 {
+    text-align: center;
+}
+
+.column img {
+    border-radius: 20px;
 }
 
 .aboutme h2 {
@@ -26,8 +52,7 @@
 }
 
 hr {
-    color: rgb(160, 176, 192);
-    width: 85%;
+    color: #6c757d;
     border-width: 5px;
 }
 
