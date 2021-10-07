@@ -10,3 +10,36 @@
 .contact ul li {
     font-size: 20px;
 }
+
+.aboutme h2 {
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.aboutme ul li {
+    font-size: 16px;
+}
+
+hr {
+    color: rgb(160, 176, 192);
+    width: 85%;
+    border-width: 5px;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(163, 163, 163);
+    border-collapse: collapse;
+}
+
+table {
+    table-layout: fixed;
+    width: 65%;
+}
+
+td,
+th {
+    word-wrap: break-word;
+    padding: 15px;
+}
