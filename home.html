@@ -1,3 +1,8 @@
+<!-- 
+    Travis Roderick
+    Web Page Project Fall 2021
+    Made for CSIS 304 Web-Based Programming at George Fox University
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +18,7 @@
 </head>
 
 <body class="bg-dark">
+
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -20,13 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -36,17 +42,13 @@
     <!-- Content -->
 
     <div class="row">
-        <div class="column">
-            <img src="contact.jpg" style="width: 100%;" alt="contact_photo">
+        <div class="column p-5 text-center bg-dark">
+            <h1 class="mb-3 text-light">Travis Roderick</h1>
+            <h4 class="mb-3 text-light">Employable Cybersecurity Student</h4>
+            <a class="btn btn-primary" href="contact.html" role="button">Hire me!</a>
         </div>
-
         <div class="column">
-            <h1 class="mb-3 text-light bg-dark">Contact Information</h1>
-            <hr>
-            <ul>
-                <li><a class="btn-lg btn-primary" href="mailto:troderick18@georgefox.edu" role="button">Email</a></li>
-                <li><a class="btn-lg btn-primary" href="http://www.linkedin.com/in/travis-roderick-bb5873191" role="button">LinkedIn</a></li>
-            </ul>
+            <img class="profile" src="me.jpg" alt="Profile photo">
         </div>
     </div>
 
@@ -54,9 +56,9 @@
     <footer class="footer bg-dark">
         <div class="container">
             <span class="text-muted">
-                    Created by Travis Roderick for CSIS 304 Web-Based Programming at
-                    George Fox University, Fall 2021
-                </span>
+                Created by Travis Roderick for CSIS 304 Web-Based Programming at
+                George Fox University, Fall 2021
+            </span>
         </div>
     </footer>
 </body>
