@@ -41,19 +41,19 @@
 
 @keyframes glow-pink {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #921654, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
     }
     to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        text-shadow: 0 0 30px #fff, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6, 0 0 90px #ff4da6;
     }
 }
 
 @keyframes glow-blue {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0092e6, 0 0 40px #0092e6, 0 0 50px #0092e6, 0 0 60px #0092e6, 0 0 70px #0092e6;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #006be6, 0 0 40px #006be6, 0 0 50px #006be6, 0 0 60px #006be6, 0 0 70px #006be6;
     }
     to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #61c5ff, 0 0 40px #61c5ff, 0 0 50px #61c5ff, 0 0 60px #61c5ff, 0 0 70px #61c5ff, 0 0 80px #61c5ff;
+        text-shadow: 0 0 30px #fff, 0 0 40px #4fdcff, 0 0 50px #4fdcff, 0 0 60px #4fdcff, 0 0 70px #4fdcff, 0 0 80px #4fdcff, 0 0 90px #4fdcff;
     }
 }
 
