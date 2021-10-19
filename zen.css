@@ -31,6 +31,9 @@
     font-display: swap;
 }
 
+
+/* https://www.w3schools.com/howto/howto_css_glowing_text.asp */
+
 @keyframes glow-pink {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
@@ -49,15 +52,23 @@
     }
 }
 
-@keyframes letter_explode {
-    0% {
-        letter-spacing: 0.1em;
-        opacity: 1;
-    }
-    100% {
-        letter-spacing: 1em;
-        opacity: 0;
-    }
+
+/* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #1d1d1d;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(49, 49, 49);
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 182, 206);
 }
 
 body {
@@ -113,13 +124,42 @@ div[class="preamble"] {
 
 div[class="main supporting"] {
     position: relative;
-    background-color: hsla(120, 100%, 0%, 0.65);
+    background-color: rgba(0, 0, 0, 0.753);
     border-radius: 20px;
     color: rgb(0, 255, 0);
     font-family: 'Courier New', Courier, monospace;
     width: 75%;
     padding: 20px;
     margin: 20px auto 20px auto;
+}
+
+aside {
+    position: fixed;
+    height: 100%;
+    width: 15%;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    padding: 40px;
+    font-family: 'Neon';
+    font-size: 20px;
+    color: #56e6ff;
+    background-color: rgba(27, 27, 27, 0.904);
+    opacity: 0%;
+}
+
+aside a {
+    color: rgb(255, 77, 196);
+}
+
+aside:hover {
+    opacity: 100%;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 
