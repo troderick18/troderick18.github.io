@@ -1,3 +1,23 @@
+function drawShape() {
+    geometry_color = parseInt(document.getElementById("colorpick_shape").value.slice(1), 16);
+}
+
+function spinSpeed(fast) {
+    if (fast === true) {
+        x_rot_speed = 0.05;
+        y_rot_speed = 0.03;
+    }
+    else {
+        x_rot_speed = 0.02;
+        y_rot_speed = 0.01;
+    }
+}
+
+var x_rot_speed = 0.02;
+var y_rot_speed = 0.01;
+var geometry_color = 0x000000;
+var outline_color = 0xffffff;
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -6,27 +26,29 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 let geometry = new THREE.DodecahedronGeometry(1, 0);
-let material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+var material = new THREE.MeshBasicMaterial({ color: geometry_color });
 
 let edges = new THREE.EdgesGeometry(geometry);
-let line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0x0000ff, linewidth: 5 }));
+let line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 5 }));
 
 let cube = new THREE.Mesh(geometry, material);
 
 scene.add(cube);
 scene.add(line);
 
-camera.position.z = 5;
+camera.position.z = 4;
 
 //Create an render loop to allow animation
 var render = function() {
     requestAnimationFrame(render);
 
-    line.rotation.x += 0.01;
-    line.rotation.y += 0.02;
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.02;
+    line.rotation.x += x_rot_speed;
+    line.rotation.y += y_rot_speed;
+    cube.rotation.x += x_rot_speed;
+    cube.rotation.y += y_rot_speed;
 
+    material.color.setHex(geometry_color);
+    
     renderer.render(scene, camera);
 };
 

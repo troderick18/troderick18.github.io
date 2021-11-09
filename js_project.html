@@ -8,11 +8,30 @@
         body {
             margin: 0
         }
+        
+        #controls {
+            background-color: white;
+            position: absolute;
+            margin: 10px;
+            padding: 10px 50px 50px 10px;
+        }
+        #controls * {
+            margin-bottom: 10px;
+        }
     </style>
 
 </head>
 
 <body>
+    <div id="controls">
+        <button onclick="spinSpeed(true)">Go Fast</button><br>
+        <button onclick="spinSpeed(false)">Go Slow</button><br>
+
+        <input type="color" id="colorpick_shape" name="colorpick_shape" value="#000000">
+        <label for="colorpick_shape">Shape Color</label><br>
+        <button onclick="drawShape()">Change color</button>
+    </div>
+    
     <script src="js/three.js"></script>
     <script src="js/geometry.js"></script>
 </body>
