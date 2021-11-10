@@ -28,7 +28,7 @@ function changeShape() {
             geometry = new THREE.BoxGeometry();
             break;
         case "1":
-            geometry = new THREE.ConeGeometry();
+            geometry = new THREE.ConeGeometry(1, 2, 16);
             break;
         case "2":
             geometry = new THREE.OctahedronGeometry();
