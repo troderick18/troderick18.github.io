@@ -15,6 +15,7 @@
             margin: 10px;
             padding: 10px 50px 50px 10px;
         }
+        
         #controls * {
             margin-bottom: 10px;
         }
@@ -30,8 +31,21 @@
         <input type="color" id="colorpick_shape" name="colorpick_shape" value="#000000">
         <label for="colorpick_shape">Shape Color</label><br>
         <button onclick="drawShape()">Change color</button>
+
+        <br>
+        <form>
+            <label>Select Shape</label><br>
+            <select id="shapePick">
+                <option value=0>Cube</option>
+                <option value=1>Cone</option>
+                <option value=2>Octahedron</option>
+                <option value=3>Dodecahedron</option>
+                <option value=4>Icosahedron</option>
+            </select>
+        </form>
+        <button onclick="changeShape()">Change shape</button>
     </div>
-    
+
     <script src="js/three.js"></script>
     <script src="js/geometry.js"></script>
 </body>

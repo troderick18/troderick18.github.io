@@ -6,11 +6,53 @@ function spinSpeed(fast) {
     if (fast === true) {
         x_rot_speed = 0.05;
         y_rot_speed = 0.03;
-    }
-    else {
+    } else {
         x_rot_speed = 0.02;
         y_rot_speed = 0.01;
     }
+}
+
+function changeShape() {
+
+    var shapeCode = 0;
+    let form = document.getElementById("shapePick");
+    for (let choice of form.children) {
+        if (choice.selected) {
+            shapeCode = choice.value;
+            break;
+        }
+    }
+
+    switch (shapeCode) {
+        case "0":
+            geometry = new THREE.BoxGeometry();
+            break;
+        case "1":
+            geometry = new THREE.ConeGeometry();
+            break;
+        case "2":
+            geometry = new THREE.OctahedronGeometry();
+            break;
+        case "3":
+            geometry = new THREE.DodecahedronGeometry();
+            break;
+        case "4":
+            geometry = new THREE.IcosahedronGeometry();
+            break;
+        default:
+            geometry = new THREE.BoxGeometry();
+            break;
+    }
+
+    scene.remove(cube);
+    scene.remove(line);
+
+    edges = new THREE.EdgesGeometry(geometry);
+    line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 5 }));
+    cube = new THREE.Mesh(geometry, material);
+
+    scene.add(cube);
+    scene.add(line);
 }
 
 var x_rot_speed = 0.02;
@@ -25,13 +67,13 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-let geometry = new THREE.DodecahedronGeometry(1, 0);
+var geometry = new THREE.DodecahedronGeometry(1, 0);
 var material = new THREE.MeshBasicMaterial({ color: geometry_color });
 
-let edges = new THREE.EdgesGeometry(geometry);
-let line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 5 }));
+var edges = new THREE.EdgesGeometry(geometry);
+var line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 5 }));
 
-let cube = new THREE.Mesh(geometry, material);
+var cube = new THREE.Mesh(geometry, material);
 
 scene.add(cube);
 scene.add(line);
@@ -48,7 +90,7 @@ var render = function() {
     cube.rotation.y += y_rot_speed;
 
     material.color.setHex(geometry_color);
-    
+
     renderer.render(scene, camera);
 };
 
