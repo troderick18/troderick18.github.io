@@ -9,7 +9,7 @@ function getActivity() {
     // Set up our HTTP request for the API
     let xhr = new XMLHttpRequest();
     let requestString = url + "?type=" + type + "&minaccessibility=0&maxaccessibility=" + accessibility + "&minprice=0&maxprice=" + price;
-    console.log(requestString);
+
     xhr.open("GET", requestString);
 
     // Callback to display
