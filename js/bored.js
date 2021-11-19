@@ -1,10 +1,23 @@
 let url = "https://www.boredapi.com/api/activity";
 
 function getActivity() {
+
+    let thingArea = document.getElementById("thingToDo");
+
+    // Remove any things in the div already
+    while (thingArea.firstChild) {
+        thingArea.removeChild(thingArea.firstChild);
+    }
+
+    // Put our loading spinner on the page
+    let loadingSpace = document.getElementById("loading-icon");
+    let loader = document.createElement('div');
+    loader.className = "loader";
+    loadingSpace.appendChild(loader);
+
     let type = document.querySelector('input[name="radio-type"]:checked').value;
     let accessibility = document.getElementById("accessibility").value;
     let price = document.getElementById("price").value;
-
 
     // Set up our HTTP request for the API
     let xhr = new XMLHttpRequest();
@@ -15,12 +28,6 @@ function getActivity() {
     // Callback to display
     xhr.onload = function() {
         let res = JSON.parse(xhr.response);
-        let thingArea = document.getElementById("thingToDo");
-
-        // Remove any things in the div already
-        while (thingArea.firstChild) {
-            thingArea.removeChild(thingArea.firstChild);
-        }
 
         // If API sends an error back, display it on the page
         if (res["error"]) {
@@ -50,6 +57,11 @@ function getActivity() {
             }
 
             thingArea.appendChild(activity);
+        }
+
+        // Remove loading spinner
+        while (loadingSpace.firstChild) {
+            loadingSpace.removeChild(loadingSpace.firstChild);
         }
 
     }
