@@ -1,4 +1,4 @@
-let url = "http://www.boredapi.com/api/activity";
+let url = "https://www.boredapi.com/api/activity";
 
 function getActivity() {
     let type = document.querySelector('input[name="radio-type"]:checked').value;
