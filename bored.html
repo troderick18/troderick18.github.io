@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Bored!</title>
+    <link href="bored.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="js/bored.js"></script>
+    <div class="parameters">
+        <p>Choose activity type(s)</p>
+        <div id="types">
+            <input type="radio" name="radio-type" id="educational" value="educational">
+            <label for="educational">educational</label><br>
+
+            <input type="radio" name="radio-type" id="social" value="social">
+            <label for="social">social</label><br>
+
+            <input type="radio" name="radio-type" id="diy" value="diy">
+            <label for="diy">diy</label><br>
+
+            <input type="radio" name="radio-type" id="charity" value="charity">
+            <label for="charity">charity</label><br>
+
+            <input type="radio" name="radio-type" id="cooking" value="cooking">
+            <label for="cooking">cooking</label><br>
+
+            <input type="radio" name="radio-type" id="relaxation" value="relaxation">
+            <label for="relaxation">relaxation</label><br>
+
+            <input type="radio" name="radio-type" id="music" value="music">
+            <label for="music">music</label><br>
+
+            <input type="radio" name="radio-type" id="busywork" value="busywork">
+            <label for="busywork">busywork</label><br>
+        </div>
+
+        <label for="accessibility">Accessibility of activity</label>
+        <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="accessibility"><br>
+
+        <label for="price">Price for activity</label>
+        <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="price">
+    </div>
+
+    <button onclick="getActivity()">Get me something to do!</button>
+
+    <div id="thingToDo">
+
+    </div>
+
+</body>
+
+</html>
