@@ -1,3 +1,7 @@
+// Travis Roderick
+// CSIS 304
+// using https://threejs.org/
+
 function drawShape() {
     geometry_color = parseInt(document.getElementById("colorpick_shape").value.slice(1), 16);
 }
