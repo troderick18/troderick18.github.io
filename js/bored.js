@@ -11,6 +11,11 @@ function getActivity() {
 
     // Put our loading spinner on the page
     let loadingSpace = document.getElementById("loading-icon");
+
+    while (loadingSpace.firstChild) {
+        loadingSpace.removeChild(loadingSpace.firstChild);
+    }
+
     let loader = document.createElement('div');
     loader.className = "loader";
     loadingSpace.appendChild(loader);
