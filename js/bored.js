@@ -1,5 +1,8 @@
 let url = "https://www.boredapi.com/api/activity";
 
+// Stretch goal: Display an image of the activity on the page
+// let imageURL = "https://imsea.herokuapp.com/api/1?q=";
+
 function getActivity() {
 
     let thingArea = document.getElementById("thingToDo");
