@@ -6,7 +6,6 @@ body {
 button {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-
     background-color: rgb(49, 156, 7);
     border-radius: 4px;
     padding: 5px;
@@ -15,30 +14,24 @@ button {
 #thingToDo {
     display: flex;
     justify-content: center;
-
     text-align: center;
     width: 30%;
-
     font-size: 24px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #thingToDo div {
     border-radius: 12px;
-    
     background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
-
+    color: rgb(0, 0, 0);
     padding: 50px;
 }
 
 #thingToDo i {
     border: 3px solid rgb(255, 0, 0);
     border-radius: 12px;
-    
     background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
-
+    color: rgb(0, 0, 0);
     padding: 10px;
 }
 
@@ -74,7 +67,7 @@ button {
 
 .parameters {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     flex-direction: column;

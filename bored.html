@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>I'm Bored!</title>
     <link href="bored.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -21,15 +21,14 @@
                 This website exists so that you never have to be bored again.
             </p>
             <p>
-                Just select what kind of activity you want to do below, adjust the parameters,
-                then hit that button and become un-bored.
+                Just select what kind of activity you want to do below, adjust the parameters, then hit that button and become un-bored.
             </p>
         </div>
-        
+
         <div class="parameters">
             <p>Choose activity type</p>
             <div id="types">
-                <input type="radio" name="radio-type" id="educational" value="educational">
+                <input type="radio" name="radio-type" id="educational" value="educational" checked>
                 <label for="educational">educational</label><br>
 
                 <input type="radio" name="radio-type" id="social" value="social">
@@ -67,12 +66,6 @@
         <div id="loading-icon"></div>
 
         <div id="thingToDo"></div>
-
-        <!-- <div id="like_button_container"></div> -->
-
-        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>  
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-        <script src="js/ui.js"></script>
 
     </div>
 
