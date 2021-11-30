@@ -5,27 +5,16 @@ let url = "https://www.boredapi.com/api/activity";
 
 function getActivity() {
 
-    let thingArea = document.getElementById("thingToDo");
+    // Clear todo area and loading icon area
+    $("#thingToDo").empty();
+    $("#loading-icon").empty();
 
-    // Remove any things in the div already
-    while (thingArea.firstChild) {
-        thingArea.removeChild(thingArea.firstChild);
-    }
+    // Create loading icon
+    $("#loading-icon").append($("<div></div>").addClass("loader"));
 
-    // Put our loading spinner on the page
-    let loadingSpace = document.getElementById("loading-icon");
-
-    while (loadingSpace.firstChild) {
-        loadingSpace.removeChild(loadingSpace.firstChild);
-    }
-
-    let loader = document.createElement('div');
-    loader.className = "loader";
-    loadingSpace.appendChild(loader);
-
-    let type = document.querySelector('input[name="radio-type"]:checked').value;
-    let accessibility = document.getElementById("accessibility").value;
-    let price = document.getElementById("price").value;
+    let type = $('input[name="radio-type"]:checked').val();
+    let accessibility = $("#accessibility").val();
+    let price = $("#price").val();
 
     // Set up our HTTP request for the API
     let xhr = new XMLHttpRequest();
@@ -40,38 +29,26 @@ function getActivity() {
         // If API sends an error back, display it on the page
         if (res["error"]) {
 
-            let errorText = document.createElement("i");
-            errorText.innerHTML = res["error"];
-
-            thingArea.appendChild(errorText);
+            $("#thingToDo").append($("<i></i>").text(res["error"]));
 
         } else {
 
             // Display the activity on the page
             // Activity lives in a div, and the link may
             // or may not be there.
-            let activityName = res["activity"];
             let link = res["link"];
 
-            let activity = document.createElement('div');
-            let name = document.createElement('b');
-            name.innerHTML = activityName;
-            activity.appendChild(name);
+            let activity = $('<div></div>').append($("<b></b>").text(res["activity"]));
 
             if (link) {
-                let linkText = document.createElement('p');
-                linkText.innerHTML = link;
-                activity.appendChild(linkText);
+                activity.append($("<p></p>").text(link));
             }
 
-            thingArea.appendChild(activity);
+            $("#thingToDo").append(activity);
         }
 
         // Remove loading spinner
-        while (loadingSpace.firstChild) {
-            loadingSpace.removeChild(loadingSpace.firstChild);
-        }
-
+        $("#loading-icon").empty();
     }
 
     xhr.send();
