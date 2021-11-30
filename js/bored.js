@@ -10,7 +10,14 @@ function getActivity() {
     $("#loading-icon").empty();
 
     // Create loading icon
-    $("#loading-icon").append($("<div></div>").addClass("loader"));
+    $("#loading-icon").append($("<div><b>loading...</b></div>").addClass("loader"));
+    anime({
+        targets: 'div.loader',
+        loop: true,
+        rotate: {
+            value: '1turn',
+        }
+    });
 
     let type = $('input[name="radio-type"]:checked').val();
     let accessibility = $("#accessibility").val();
